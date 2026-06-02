@@ -229,56 +229,65 @@
 
 <script>
 const questions = [
-  {
-    q: 'Arah serangan kaki, kecuali',
-    options: ['Atas', 'Belakang', 'Samping', 'Busur sisi', 'Semua benar'],
-    answer: 4
-  },
-  {
-    q: 'Unsur pencak silat, kecuali',
-    options: ['Hiburan', 'Olahraga', 'Bela diri', 'Seni', 'Persaudaraan'],
-    answer: 0
-  },
-  {
-    q: 'Pertandingan dengan tiga pesilat disebut kategori',
-    options: ['Tanding', 'Tunggal', 'Ganda', 'Regu', 'Campuran'],
-    answer: 3
-  },
-  {
-    q: 'Induk organisasi pencak silat di Indonesia adalah',
-    options: ['IPSF', 'PSSI', 'PBSI', 'IPSI', 'FIFA'],
-    answer: 3
-  },
-  {
-    q: 'Teknik dasar dalam pencak silat meliputi',
-    options: ['Sikap pasang', 'Langkah', 'Serangan', 'Belaan', 'Semua benar'],
-    answer: 4
-  },
-  {
-    q: 'Pukulan dalam pencak silat termasuk teknik',
-    options: ['Serangan', 'Pertahanan', 'Gerakan dasar', 'Langkah', 'Sikap'],
-    answer: 0
-  },
-  {
-    q: 'Tendangan sabit dilakukan dengan arah',
-    options: ['Lurus', 'Melingkar', 'Vertikal', 'Horizontal', 'Diagonal'],
-    answer: 1
-  },
-  {
-    q: 'Sikap awal dalam pencak silat disebut',
-    options: ['Kuda-kuda', 'Langkah', 'Tangkisan', 'Serangan', 'Putaran'],
-    answer: 0
-  },
-  {
-    q: 'Gerakan menghindari serangan lawan disebut',
-    options: ['Elakan', 'Serangan', 'Tendangan', 'Pukulan', 'Kuncian'],
-    answer: 0
-  },
-  {
-    q: 'Teknik menjatuhkan lawan disebut',
-    options: ['Kuncian', 'Bantingan', 'Pukulan', 'Tendangan', 'Elakan'],
-    answer: 1
-  }
+  { q: 'Arah serangan kaki, kecuali', options: ['Atas','Belakang','Samping','Busur sisi','Semua benar'], answer: 4 },
+  { q: 'Unsur pencak silat, kecuali', options: ['Hiburan','Olahraga','Bela diri','Seni','Persaudaraan'], answer: 0 },
+  { q: 'Pertandingan dengan tiga pesilat disebut kategori', options: ['Tanding','Regu','Ganda','Tunggal','Campuran'], answer: 1 },
+  { q: 'Anggota tubuh yang tidak digunakan untuk menangkis adalah', options: ['Tangan','Kaki','Siku','Kepala','Semua benar'], answer: 4 },
+  { q: 'Waktu istirahat antar babak adalah', options: ['1 menit','2 menit','3 menit','4 menit','5 menit'], answer: 0 },
+
+  { q: 'Jumlah babak dalam pertandingan pencak silat adalah', options: ['1','2','3','4','5'], answer: 2 },
+  { q: 'Nilai untuk tendangan adalah', options: ['1','2','3','4','5'], answer: 1 },
+  { q: 'Nilai untuk pukulan adalah', options: ['1','2','3','4','5'], answer: 0 },
+  { q: 'Organisasi pencak silat Indonesia adalah', options: ['IPSI','PSSI','PBSI','FIFA','PERBASI'], answer: 0 },
+  { q: 'Teknik dasar pencak silat meliputi', options: ['Kuda-kuda','Sikap pasang','Langkah','Serangan','Semua benar'], answer: 4 },
+
+  { q: 'Gerakan menghindar disebut', options: ['Elakan','Serangan','Pukulan','Tendangan','Kuncian'], answer: 0 },
+  { q: 'Gerakan menahan serangan disebut', options: ['Tangkisan','Serangan','Elakan','Pukulan','Tendangan'], answer: 0 },
+  { q: 'Serangan dengan tangan disebut', options: ['Pukulan','Tendangan','Elakan','Kuncian','Langkah'], answer: 0 },
+  { q: 'Serangan dengan kaki disebut', options: ['Tendangan','Pukulan','Elakan','Kuncian','Langkah'], answer: 0 },
+  { q: 'Teknik menjatuhkan lawan disebut', options: ['Bantingan','Pukulan','Tendangan','Elakan','Langkah'], answer: 0 },
+
+  { q: 'Sikap dasar pencak silat adalah', options: ['Kuda-kuda','Langkah','Tendangan','Pukulan','Elakan'], answer: 0 },
+  { q: 'Langkah digunakan untuk', options: ['Berpindah','Menyerang','Menjatuhkan','Mengunci','Diam'], answer: 0 },
+  { q: 'Kuda-kuda berfungsi untuk', options: ['Keseimbangan','Serangan','Lompatan','Elakan','Diam'], answer: 0 },
+  { q: 'Sikap pasang digunakan untuk', options: ['Bertahan & menyerang','Duduk','Tidur','Diam','Lari'], answer: 0 },
+  { q: 'Elakan bertujuan untuk', options: ['Menghindar','Menyerang','Menjatuhkan','Mengunci','Diam'], answer: 0 },
+
+  { q: 'Tangkisan bertujuan untuk', options: ['Menahan serangan','Menyerang','Melompat','Menghindar','Diam'], answer: 0 },
+  { q: 'Kuncian bertujuan untuk', options: ['Mengunci lawan','Menendang','Memukul','Menghindar','Diam'], answer: 0 },
+  { q: 'Bantingan bertujuan untuk', options: ['Menjatuhkan lawan','Menyerang','Melompat','Menghindar','Diam'], answer: 0 },
+  { q: 'Pertahanan disebut', options: ['Belaan','Serangan','Langkah','Pukulan','Tendangan'], answer: 0 },
+  { q: 'Serangan disebut', options: ['Ofensif','Defensif','Pasif','Aktif','Netral'], answer: 0 },
+
+  { q: 'Jumlah wasit dalam pertandingan adalah', options: ['1','2','3','4','5'], answer: 0 },
+  { q: 'Jumlah juri dalam pertandingan adalah', options: ['3','4','5','6','7'], answer: 2 },
+  { q: 'Pakaian pencak silat berwarna', options: ['Hitam','Putih','Merah','Biru','Hijau'], answer: 0 },
+  { q: 'Sabuk pencak silat disebut', options: ['Stagen','Sabuk','Ikat pinggang','Kain','Tali'], answer: 1 },
+  { q: 'Tempat pertandingan disebut', options: ['Gelanggang','Lapangan','Arena','Ring','Stadion'], answer: 0 },
+
+  { q: 'Ukuran gelanggang adalah', options: ['10x10','8x8','6x6','12x12','14x14'], answer: 1 },
+  { q: 'Lama pertandingan per babak', options: ['2 menit','3 menit','4 menit','5 menit','6 menit'], answer: 1 },
+  { q: 'Istirahat antar babak', options: ['1 menit','2 menit','3 menit','4 menit','5 menit'], answer: 0 },
+  { q: 'Kategori tanding adalah', options: ['1 lawan 1','2 lawan 2','3 orang','4 orang','5 orang'], answer: 0 },
+  { q: 'Kategori tunggal adalah', options: ['Perorangan','Berpasangan','Bertiga','Beregu','Campuran'], answer: 0 },
+
+  { q: 'Kategori ganda adalah', options: ['Berpasangan','Sendiri','Bertiga','Beregu','Campuran'], answer: 0 },
+  { q: 'Kategori regu adalah', options: ['3 orang','2 orang','1 orang','4 orang','5 orang'], answer: 0 },
+  { q: 'Nilai jatuhan adalah', options: ['3','2','1','4','5'], answer: 0 },
+  { q: 'Nilai tangkapan adalah', options: ['1','2','3','4','5'], answer: 0 },
+  { q: 'Nilai pukulan sah adalah', options: ['1','2','3','4','5'], answer: 0 },
+
+  { q: 'Nilai tendangan sah adalah', options: ['2','1','3','4','5'], answer: 0 },
+  { q: 'Sasaran serangan adalah', options: ['Badan','Kepala','Kaki','Tangan','Semua'], answer: 0 },
+  { q: 'Bagian tubuh terlarang diserang', options: ['Leher','Badan','Dada','Pinggang','Paha'], answer: 0 },
+  { q: 'Wasit bertugas untuk', options: ['Memimpin pertandingan','Menilai','Mencatat','Menonton','Mengatur'], answer: 0 },
+  { q: 'Juri bertugas untuk', options: ['Memberi nilai','Memimpin','Mencatat','Menonton','Mengatur'], answer: 0 },
+
+  { q: 'Pelanggaran berat mendapat hukuman', options: ['Diskualifikasi','Teguran','Peringatan','Nilai minus','Diam'], answer: 0 },
+  { q: 'Pelanggaran ringan mendapat', options: ['Teguran','Diskualifikasi','Keluar','Nilai tambah','Hadiah'], answer: 0 },
+  { q: 'Tujuan pencak silat adalah', options: ['Bela diri','Olahraga','Seni','Mental','Semua benar'], answer: 4 },
+  { q: 'Manfaat pencak silat adalah', options: ['Kesehatan','Kekuatan','Kecepatan','Kelincahan','Semua benar'], answer: 4 },
+  { q: 'Pencak silat berasal dari', options: ['Indonesia','Malaysia','Thailand','Jepang','China'], answer: 0 }
 ];
 
 const labels = ['A','B','C','D','E'];
