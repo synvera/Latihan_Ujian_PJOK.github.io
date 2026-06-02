@@ -311,8 +311,8 @@ function render() {
   container.innerHTML = '';
   questions.forEach((q, i) => {
     const isAnswered = userAnswers[i] !== null;
-    const isCorrect = submitted && userAnswers[i] === q.answer;
-    const isWrong = submitted && userAnswers[i] !== null && userAnswers[i] !== q.answer;
+    const isCorrect = submitted && isAnswerCorrect(q, userAnswers[i]);
+    const isWrong = submitted && userAnswers[i] !== null && !isAnswerCorrect(q, userAnswers[i]);
     if (currentFilter === 'unanswered' && isAnswered) return;
     if (currentFilter === 'answered' && !isAnswered) return;
 
@@ -393,6 +393,12 @@ function filterQuestions(type) {
     b.className = 'btn' + (['all','unanswered','answered'][i] === type ? ' active' : '');
   });
   render();
+}
+
+function isAnswerCorrect(q, userAns) {
+  if (q.answer === 'all') return true;
+  if (Array.isArray(q.answer)) return q.answer.includes(userAns);
+  return userAns === q.answer;
 }
 
 render();
